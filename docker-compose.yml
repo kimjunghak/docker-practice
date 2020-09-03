@@ -4,14 +4,14 @@ services:
   boarddb:
     image: mysql
     environment:
-      MYSQL_ROOT_PASSWORD=admin
+      MYSQL_ROOT_PASSWORD: admin
     ports:
       - 3306:3306
 
   spring-boot-start-real:
     build: .
     environment:
-      SPRING_PROFILES_ACTIVE=real
+      SPRING_PROFILES_ACTIVE: real
     image: kboy1025/spring-boot-start:0.0.1
     ports:
       - "8080:8080"
@@ -21,7 +21,7 @@ services:
   spring-boot-start-dev:
     build: .
     environment:
-      SPRING_PROFILES_ACTIVE=dev
+      SPRING_PROFILES_ACTIVE: dev
     image: kboy1025/spring-boot-start:0.0.1
     ports:
       - "8081:8081"
